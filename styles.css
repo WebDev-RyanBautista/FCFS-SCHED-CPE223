@@ -1,0 +1,167 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+
+#background-image-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-image: url('https://wallpapercave.com/wp/wp9483217.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+
+#fcfs-calculator {
+    width: 30%;
+    margin: 10px auto;
+    padding: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.input-section label,
+.input-section input,
+.input-section button {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.input-section button {
+    padding: 10px;
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.input-section button:hover {
+    background-color: #4cae4c;
+}
+
+
+.output-section {
+    margin-top: 20px;
+}
+
+
+#gantt-chart {
+    margin-bottom: 30px;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+
+#group-info,
+footer {
+    text-align: center;
+    margin-top: 300px;
+}
+
+
+#group-images {
+    text-align: center;
+    padding-top: 1px; 
+}
+
+#group-images figure {
+    display: inline-block;
+    text-align: center;
+    margin:100px; 
+}
+
+#group-images img {
+    width: 1.5in;
+    height: 1.5in;
+    border-radius: 150%;
+    object-fit: cover;
+}
+
+#group-images figcaption {
+    color: #568f56;
+    font-size: 1.5em;
+    margin-top: 10px;
+}
+
+p {
+    color: rgb(231, 218, 94);
+    font-size: 3em;
+    
+}
+
+#group-images img {
+    width: 1.5in;
+    height: 1.5in;
+    border-radius: 150%;
+    object-fit: cover;
+    transition: transform 0.1s ease; 
+}
+
+#group-images img:hover {
+    transform: translateY(20px); 
+}
+
+h1,h2,h3,h4 {
+    color: white;
+    font-size: 1.3em;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+    
+}
+.top-right-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 720px;
+    height: 300px;
+    padding-top: 1;
+}
+.top-left-image {
+    position: absolute;
+    top: 0;
+    border-bottom-right-radius: 0;
+    width: 200px;
+    height: 200px;
+    padding-top: -5%;
+}
+h5 {
+    color: rgb(20, 175, 15);
+    font-size: 1.3em;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    
+    
+}
+#iframe {
+    position: fixed; /* Keeps the <iframe> in place even when scrolling */
+    top: 0; /* Position at the top */
+    right: 100; /* Position at the right */
+    width: 200px; /* Set a specific width */
+    height: 100px; /* Set a specific height */
+}

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FCFS Scheduler</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+    <div id="background-image-container"></div>
+    <div id="fcfs-calculator">
+        <div class="input-section">
+            <label for="num-processes">Enter Number of Process :</label>
+            <input type="number" id="num-processes" min="1" placeholder="e.g., 3" onchange="generateInputs()">
+            <div id="process-inputs"></div>
+            <button onclick="calculateFCFS()">Calculate</button>
+        </div>
+        <div class="output-section">
+            <h5>Gantt-chart First Come First Serve Scheduling</h5>
+           
+           <button onclick="toggleTable()">Hide&Show the table </button>
+           <table id="result-table">
+            <div id="gantt-chart"></div>
+
+                <tr>
+                    <th>Process ID </th>
+                    <th>Arrival Time</th>
+                    <th>Burst Time</th>
+                    <th>Finish Time</th>
+                    <th>Turnaround Time</th>
+                    <th>Waiting Time</th>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div id="group-info">
+        <p></p>
+    </div>
+    <footer>
+        <p></p>
+       
+    </footer>
+    <script src="script.js"></script>
+</body>
+<div id="group-images">
+    
+    <figure>
+        <a href="https://www.facebook.com/ryan.bautista.37669" target="_blank">
+            <img src="https://scontent.fmnl16-1.fna.fbcdn.net/v/t1.6435-9/86773312_4041392125886203_2797913181773627392_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeGgov89iqW3guaS2JOs9fX8mlFzo9wswdOaUXOj3CzB0zwnEhMkQBsYudVDFuru4We_FucijGH-nqdNBDTQg1MT&_nc_ohc=Jsdr9vuz-fIAX-8_rJX&_nc_ht=scontent.fmnl16-1.fna&oh=00_AfBl-22IT4HQBpCpjG0HGjTxkaSkWI2CcIvacAyc6zYP3Q&oe=662C58F0" alt="Group Image 1">
+        </a>
+        <div class="caption-container">
+            <figcaption>Ryan Bautista</figcaption>
+        </div>
+        <h1 class="additional-text">Programmer</h1>
+    </figure>
+    <figure>
+        <a href="https://www.facebook.com/glyza.ocenar.7" target="_blank">
+            <img src="https://scontent.fmnl16-1.fna.fbcdn.net/v/t39.30808-6/432023254_1088864495683409_2967802679709016146_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeF8VfNrAZf9TWR3uSMLfPR7VC1oO6h0HFpULWg7qHQcWtvf2Ic5lTUZtulHribQpB9jvvwbgIAgIu3yk_OYD3sG&_nc_ohc=govxkw_ffPkAX8mU2R9&_nc_ht=scontent.fmnl16-1.fna&oh=00_AfBUR3ckiRzzOC7AfTpDU3FtGOW7XupAvhmPi5Yu0Z_HGA&oe=6609856E" alt="Group Image 2">
+        </a>
+        <div class="caption-container">
+            <figcaption>Glyza Lopez Ocenar</figcaption>
+        </div>
+        <h2 class="additional-text">Project manager</h2>
+    </figure>
+    <figure>
+        <a href="https://www.facebook.com/photo/?fbid=2728345673991227&set=a.103845159774638" target="_blank">
+            <img src="https://scontent.fmnl16-1.fna.fbcdn.net/v/t39.30808-6/429837146_2728345670657894_6194792560546266473_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeGZTxOITMlLS1k332loMZOzREnQHvDHn9lESdAe8Mef2ZKznu44fXl6rSbFYHNGHE0HEHi2ZlL-3reXIKLeFDD-&_nc_ohc=_K-1D9E4YyIAX8MBpnO&_nc_ht=scontent.fmnl16-1.fna&oh=00_AfBMj1NKjRg8R1viOpm08x4sFH2m3wA6okDiqCd0yMl5ww&oe=6609AA2B" alt="Group Image 3">
+        </a>
+        <div class="caption-container">
+            <figcaption>Grezia Joy Nacionales</figcaption>
+        </div>
+        <h3 class="additional-text">Presenter</h3>
+    </figure>
+
+ 
+    <figure>
+        <a href="https://www.facebook.com/mallari.marvin.o" target="_blank">
+            <img src="https://scontent.fmnl16-1.fna.fbcdn.net/v/t39.30808-6/218245896_10219671473793120_4486086763681934282_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeFA7h7IAObYS8xX4S4Ye00fLowK1--soYAujArX76yhgIz8-3lh3SApgtv6fG0IrXD7hWEP1Ij_WDfqJi17o5KQ&_nc_ohc=AJcUExwkxWEAX-6_Bp-&_nc_ht=scontent.fmnl16-1.fna&oh=00_AfDVP7tRM3M1RX1rsgJaQa_9bAcK8_Wat9822hz2qjZEtQ&oe=660986B8" alt="Professor Image">
+        </a>
+        <div class="caption-container">
+            
+            <figcaption>Dr. Marvin Mallari</figcaption>
+        </div>
+        <h4 class="additional-text">Subj:Professor</h4>
+    </figure>
+</div
+
+<div id="content">
+    <!-- Other content -->
+    <img src="" alt="Your Image" class="top-right-image">
+</div>
+
+<div id="content">
+    <!-- Other content -->
+    <img src="eng.png" alt="Your Image" class="top-left-image">
+</div>
+<div id="clock-container">
+    <span id="iframe"></span>
+<iframe src="https://free.timeanddate.com/clock/i9az18ej/n5100/szw110/szh110/hoc222/hbw6/cf100/hgr0/hcw2/hcd88/fan2/fas20/fdi70/mqc000/mqs3/mql13/mqw4/mqd94/mhc000/mhs3/mhl13/mhw4/mhd94/mmc000/mml5/mmw1/mmd94/hwm2/hhs2/hhb18/hms2/hml80/hmb18/hmr7/hscf09/hss1/hsl90/hsr5" frameborder="0" width="110" height="110"></iframe>
+</div>
+</html>
+
+
